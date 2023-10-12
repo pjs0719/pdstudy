@@ -7,7 +7,7 @@ import Memo from "./Memo"
 import DropdownComponent from "./Dropdown"
 import chatgptlogo from "./img/chatgpt.jpeg"
 import { useNavigate } from "react-router-dom"
-
+//
 // 메모 정렬 함수
 const sortMemos = (memos, sortType) => {
   if (sortType === "recent") {
