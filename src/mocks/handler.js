@@ -1,6 +1,6 @@
 import { rest } from 'msw';
 
-const names = ['A', 'B', 'C', 'D']
+const names = ["a", "x", "i", "o", "s"]
 
 export const getHandler = [
     rest.get('https://jsonplaceholder.typicode.com/todos/1', (req, res, ctx) => {

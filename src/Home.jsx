@@ -5,20 +5,8 @@ import "./App.css"
 import { ListGroup, Card } from "react-bootstrap"
 import Memo from "./Memo"
 import DropdownComponent from "./Dropdown"
-import chatgptlogo from "./img/chatgpt.jpeg"
 import { useNavigate } from "react-router-dom"
-//
-// 메모 정렬 함수
-const sortMemos = (memos, sortType) => {
-  if (sortType === "recent") {
-    return [...memos].sort((a, b) => b.timestamp - a.timestamp) // 최신 메모부터 정렬
-  } else if (sortType === "alphabetical") {
-    return [...memos].sort((a, b) => a.title.localeCompare(b.title)) // 제목순으로 정렬
-  } else if (sortType === "old") {
-    return [...memos].sort((a, b) => a.timestamp - b.timestamp) // 오래된 메모부터 정렬
-  }
-  return memos // 정렬 기준이 없을 경우 원래 순서대로 반환
-}
+import sortMemos from "./utils/sortMemos"
 
 function Home() {
   const [memos, setMemos] = useState([]) // 메모 목록
@@ -26,6 +14,7 @@ function Home() {
   const [modalIsOpen, setModalIsOpen] = useState(false) // 모달 상태 변수
   const [sortType, setSortType] = useState("recent") // 메모 정렬 기준
   const navigate = useNavigate()
+
   useEffect(() => {
     void (async () => {
       const data = await (await fetch("https://jsonplaceholder.typicode.com/todos/1")).json()
@@ -36,9 +25,10 @@ function Home() {
           body: 33
         })
       ).json()
-      console.log({ data, data1 })
+      //   console.log({ data, data1 })
     })()
   }, [])
+
   // 메모를 추가하는 함수
   const addMemo = newMemo => {
     if (newMemo.content.trim()) {
