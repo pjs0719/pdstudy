@@ -1,70 +1,16 @@
-# Getting Started with Create React App
+## 교내 pd학기제 프로젝트 입니다
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 리액트와 파이썬을 이용하여 구현하였습니다.
 
-## Available Scripts
+- 주요 기능 약품 로그인 기능,메모 기능, AI채팅기능
 
-In the project directory, you can run:
+- AI채팅 기능
+open AI의 chat gpt4 모델을 사용하여 채팅 기능을 구현하였습니다. 또한 부족한 GPT의 의약품 정보를 해결하기 위해 공공의약품 데이터를 활용하여 GPT에게 의약품 데이터를 분석하여 설명할 수 있도록 구현하였습니다. 따라서 작동 방식의 원리는 (사용자의 텍스트 입력을 통하여 의약품 데이터 불러오기) -> (불러온 데이터를 GPT에게 삽입) -> (정해진 데이터 처리 방식을 통하여 GPT의 답변 출력)
 
-### `npm start`
+- 개선할 점
+원래의 목표는 의약품 데이터를 파인튜닝하여 채팅 모델을 만들려고 하였지만. 의약품데이터의 너무 많은 자료를 학습하는데 문제가 있고, 파인튜닝의 결과가 올바르게 출력되지 않는 문제로 인하여 받아온 데이터를 정리하여 출력하는 방식의 기존의 방식으로 변경하였습니다. 더욱 좋은 사용자 경험을 위해서는 올바른 파인튜닝이 필요한 것으로 보입니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 추가
+GPT의 파인튜닝 과정을 진행하지 못하여 2nd-grade-software-contest 프로젝트를 통하여 학교 데이터 파인튜닝을 통한 학교 정보 채팅 봇으로 구현해보았습니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
